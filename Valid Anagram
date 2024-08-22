@@ -1,0 +1,23 @@
+class Solution {
+    func isAnagram(_ s: String, _ t: String) -> Bool {
+        if s.count != t.count {
+            return false
+        }
+
+        var m = [Character: Int]()
+
+        for ch in s{
+            m[ch , default: 0 ] += 1
+        }
+
+        for ch in t {
+            if let count = m[ch], count>0{
+                m[ch] = count - 1
+            }else{
+                return false
+            }
+        }
+
+        return true
+    }
+}
