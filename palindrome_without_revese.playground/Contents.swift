@@ -14,8 +14,10 @@ func isPal(str: String) -> Bool {
             
             return false
         }
-            
+            //decresing last pointer
             last_index = str.index(before: last_index)
+            
+            // incresing the 
             first_index = str.index(after: first_index)
     }
     
